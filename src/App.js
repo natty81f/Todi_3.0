@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-import { database } from './firebase';
+import { auth, database } from './firebase';
+import CurrentUser from './CurrentUser';
+import SignIn from './SignIn';
+import NewTodi from './NewTodi';
+import Todis from './Todis';
 import './App.css';
 
 class App extends Component {
