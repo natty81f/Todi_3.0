@@ -12,10 +12,10 @@ class Todis extends Component {
     }
 }
 
-Todis.propTypes = {
-    user: PropTypes,
-    todisRef: PropTypes.object,
-    todis: PropTypes.object
-};
+// Todis.propTypes = {
+//     user: PropTypes,
+//     todisRef: PropTypes.object,
+//     todis: PropTypes.object
+// };
 
 export default Todis;

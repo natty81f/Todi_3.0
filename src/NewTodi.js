@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { database } from './firebase';
 
 class NewTodi extends Component {
     constructor() {
@@ -6,12 +7,13 @@ class NewTodi extends Component {
         this.state = {
             name: ''
         };
-
-        this.handleSubmit = this.handleSubmit.bind();
+        this.todisRef = database.ref('/todis');
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleSubmit(event) {
         event.preventDefault();
+        this.todisRef.push({ name: this.state.name });
     }
 
     render() {
@@ -33,8 +35,8 @@ class NewTodi extends Component {
     }
 }
 
-NewTodi.propTypes = {
-    todisRef: PropTypes.object
-};
+// NewTodi.propTypes = {
+//     todisRef: PropTypes.object
+// };
 
 export default NewTodi;

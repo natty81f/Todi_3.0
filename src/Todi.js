@@ -7,12 +7,12 @@ class Todi extends Component {
     }
 }
 
-Todi.propTypes = {
-    name: PropTypes.string,
-    likes: PropTypes.object,
-    user: PropTypes.object,
-    handleSelect: PropTypes.func,
-    handleDeselect: PropTypes.func
-};
+// Todi.propTypes = {
+//     name: PropTypes.string,
+//     likes: PropTypes.object,
+//     user: PropTypes.object,
+//     handleSelect: PropTypes.func,
+//     handleDeselect: PropTypes.func
+// };
 
 export default Todi;
