@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Todi from './Todi';
 import map from 'lodash/map';
 
@@ -12,10 +13,10 @@ class Todis extends Component {
     }
 }
 
-// Todis.propTypes = {
-//     user: PropTypes,
-//     todisRef: PropTypes.object,
-//     todis: PropTypes.object
-// };
+Todis.propTypes = {
+    user: PropTypes,
+    todisRef: PropTypes.object,
+    todis: PropTypes.object
+};
 
 export default Todis;

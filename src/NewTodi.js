@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { database } from './firebase';
 
 class NewTodi extends Component {
@@ -35,8 +36,8 @@ class NewTodi extends Component {
     }
 }
 
-// NewTodi.propTypes = {
-//     todisRef: PropTypes.object
-// };
+NewTodi.propTypes = {
+    todisRef: PropTypes.object
+};
 
 export default NewTodi;

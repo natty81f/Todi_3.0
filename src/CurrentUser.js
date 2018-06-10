@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes, { shape } from 'prop-types';
 import { auth } from './firebase';
 
 const CurrentUser = ({ user }) => {
@@ -18,13 +19,13 @@ const CurrentUser = ({ user }) => {
     );
 };
 
-// CurrentUser.propTypes = {
-//     user: PropTypes.shape({
-//         displayName: PropTypes.string,
-//         email: PropTypes.string.isRequired,
-//         photoURL: PropTypes.string,
-//         uid: PropTypes.string.isRequired
-//     })
-// };
+CurrentUser.propTypes = {
+    user: shape({
+        displayName: PropTypes.string,
+        email: PropTypes.string.isRequired,
+        photoURL: PropTypes.string,
+        uid: PropTypes.string.isRequired
+    })
+};
 
 export default CurrentUser;
