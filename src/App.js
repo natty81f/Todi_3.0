@@ -6,24 +6,30 @@ import SignIn from './SignIn';
 import NewTodi from './NewTodi';
 import Todis from './Todis';
 import './App.css';
+import map from 'lodash/map';
 
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            currentUser: null
+            currentUser: null,
+            todis: null
         };
+
+        this.todiRef = database.ref('/todis');
     }
 
     componentDidMount() {
         auth.onAuthStateChanged(currentUser => {
-            console.log('AUTH CHNAGED', currentUser);
             this.setState({ currentUser });
+            this.todiRef.on('value', snapshot => {
+                this.setState({ todis: snapshot.val() });
+            });
         });
     }
 
     render() {
-        const { currentUser } = this.state;
+        const { currentUser, todis } = this.state;
 
         return (
             <div className="App">
@@ -36,6 +42,7 @@ class App extends Component {
                         {currentUser && (
                             <div>
                                 <NewTodi />
+                                {map(todis, (todi, key) => <p key={key}>{todi.name}</p>)}
                                 <CurrentUser user={currentUser} />
                             </div>
                         )}
