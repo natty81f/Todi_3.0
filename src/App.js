@@ -6,7 +6,6 @@ import SignIn from './SignIn';
 import NewTodi from './NewTodi';
 import Todis from './Todis';
 import './App.css';
-import map from 'lodash/map';
 
 class App extends Component {
     constructor(props) {
@@ -22,6 +21,7 @@ class App extends Component {
     componentDidMount() {
         auth.onAuthStateChanged(currentUser => {
             this.setState({ currentUser });
+
             this.todiRef.on('value', snapshot => {
                 this.setState({ todis: snapshot.val() });
             });
@@ -36,17 +36,16 @@ class App extends Component {
                 <header className="App-header">
                     <h2>Welcome to soon to be Todi</h2>
                 </header>
+
                 <div>
-                    <div>
-                        {!currentUser && <SignIn />}
-                        {currentUser && (
-                            <div>
-                                <NewTodi />
-                                {map(todis, (todi, key) => <p key={key}>{todi.name}</p>)}
-                                <CurrentUser user={currentUser} />
-                            </div>
-                        )}
-                    </div>
+                    {!currentUser && <SignIn />}
+                    {currentUser && (
+                        <div>
+                            <NewTodi />
+                            <Todis todis={todis} user={currentUser} />
+                            <CurrentUser user={currentUser} />
+                        </div>
+                    )}
                 </div>
             </div>
         );

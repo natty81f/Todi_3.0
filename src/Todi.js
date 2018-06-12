@@ -4,7 +4,13 @@ import map from 'lodash/map';
 
 class Todi extends Component {
     render() {
-        return <article className="Todi" />;
+        const { name, handleSelect } = this.props;
+        return (
+            <article className="Todi">
+                <h3>{name}</h3>
+                <button onClick={handleSelect}>I like dis</button>
+            </article>
+        );
     }
 }
 
