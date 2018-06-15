@@ -4,11 +4,17 @@ import map from 'lodash/map';
 
 class Todi extends Component {
     render() {
-        const { name, handleSelect } = this.props;
+        const { name, user, likes, handleSelect, handleDeselect } = this.props;
+        const userHasLiked = likes && Object.keys(likes).includes(user.uid);
         return (
             <article className="Todi">
                 <h3>{name}</h3>
-                <button onClick={handleSelect}>I like dis</button>
+                <ul>{likes && map(likes, (like, key) => <li key={key}>{like}</li>)}</ul>
+                {userHasLiked ? (
+                    <button onClick={handleDeselect}>Nevermind</button>
+                ) : (
+                    <button onClick={handleSelect}>I like dis</button>
+                )}
             </article>
         );
     }

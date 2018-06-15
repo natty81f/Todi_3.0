@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Todi from './Todi';
 import map from 'lodash/map';
 import { database } from './firebase';
+import CurrentUser from './CurrentUser';
 
 class Todis extends Component {
     constructor(props) {
@@ -33,13 +34,14 @@ class Todis extends Component {
     }
 
     render() {
-        const { todis } = this.props;
+        const { user, todis } = this.props;
         return (
             <section className="Todis">
                 {map(todis, (todi, key) => (
                     <Todi
                         key={key}
                         {...todi}
+                        user={user}
                         handleSelect={() => this.handleSelect(key)}
                         handleDeselect={() => this.handleDeselect(key)}
                     />
