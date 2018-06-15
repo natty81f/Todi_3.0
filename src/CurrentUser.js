@@ -13,7 +13,7 @@ const CurrentUser = ({ user }) => {
             <div className="CurrentUser--identification">
                 <h3>{user.displayName}</h3>
                 <p>{user.email}</p>
-                <button>Sign Out</button>
+                <button onClick={() => auth.signOut()}>Sign Out</button>
             </div>
         </div>
     );

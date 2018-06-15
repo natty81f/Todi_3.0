@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Todi from './Todi';
 import map from 'lodash/map';
 import { database } from './firebase';
-import CurrentUser from './CurrentUser';
 
 class Todis extends Component {
     constructor(props) {
