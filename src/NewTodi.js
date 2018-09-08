@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import { database } from './firebase';
 
 class NewTodi extends Component {
-    constructor() {
+    constructor(props) {
         super();
         this.state = {
-            name: ''
+            name: '',
+            emojis: props.emojis
         };
         this.todisRef = database.ref('/todis');
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -14,7 +15,7 @@ class NewTodi extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        this.todisRef.push({ name: this.state.name });
+        this.todisRef.push({ name: this.state.name, emojis: this.props.emojis });
     }
 
     render() {
@@ -26,8 +27,14 @@ class NewTodi extends Component {
                     type="text"
                     value={name}
                     placeholder="Spill your heart out..."
-                    onChange={event => this.setState({ name: event.target.value })}
+                    onChange={event =>
+                        this.setState({
+                            name: event.target.value
+                        })
+                    }
                 />
+
+                {/* <input type="hidden" value={this.state.emojis} /> */}
                 <button onClick={this.handleSubmit} disabled={!name}>
                     Submit
                 </button>

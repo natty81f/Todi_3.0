@@ -1,0 +1,16 @@
+{
+    "emojis": [
+        {
+            "title": "happy",
+            "image": "happy.png"
+        },
+        {
+            "title": "love",
+            "image": "love.png"
+        },
+        {
+            "title": "omg",
+            "image": "omg.png"
+        }
+    ]
+}

@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import { auth, database } from './firebase';
 import CurrentUser from './CurrentUser';
 import SignIn from './SignIn';
-import NewTodi from './NewTodi';
 import Todis from './Todis';
+import Emojis from './Emojis';
 import './App.css';
 
 class App extends Component {
@@ -41,7 +41,8 @@ class App extends Component {
                     {!currentUser && <SignIn />}
                     {currentUser && (
                         <div>
-                            <NewTodi />
+                            {/* <NewTodi /> */}
+                            <Emojis />
                             <Todis todis={todis} user={currentUser} />
                             <CurrentUser user={currentUser} />
                         </div>
