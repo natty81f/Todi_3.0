@@ -2,20 +2,31 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import NewTodi from './NewTodi';
 import preload from './data.json';
+import { Modal } from 'react-bootstrap';
 
 class Emojis extends Component {
-    constructor(props) {
-        super(props);
+    constructor(props, context) {
+        super(props, context);
         this.state = {
-            emojis: props.emojis
+            emojis: props.emojis,
+            show: false
         };
+
+        this.handleOpen = this.handleOpen.bind(this);
+        this.handleClose = this.handleClose.bind(this);
     }
 
-    getEmoji(title) {
+    // pass emoji title props
+    handleOpen(title) {
         console.log(title);
         this.setState({
-            emojis: title
+            emojis: title,
+            show: true
         });
+    }
+
+    handleClose() {
+        this.setState({ show: false });
     }
 
     render() {
@@ -25,13 +36,21 @@ class Emojis extends Component {
                     <div
                         className="show-emoji"
                         key={key}
-                        onClick={this.getEmoji.bind(this, emoji.title)}
+                        onClick={this.handleOpen.bind(this, emoji.title)}
                     >
                         <img alt={`${emoji.title} Emoji`} src={`/${emoji.image}`} />
                         <h3>{emoji.title}</h3>
                     </div>
                 ))}
-                <NewTodi emojis={this.state.emojis} />
+
+                <Modal show={this.state.show} onHide={this.handleClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Write your new Todi</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <NewTodi emojis={this.state.emojis} onHide={this.handleClose} />
+                    </Modal.Body>
+                </Modal>
             </div>
         );
     }

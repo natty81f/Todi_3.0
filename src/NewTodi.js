@@ -4,7 +4,7 @@ import { database } from './firebase';
 
 class NewTodi extends Component {
     constructor(props) {
-        super();
+        super(props);
         this.state = {
             name: '',
             emojis: props.emojis
@@ -16,13 +16,16 @@ class NewTodi extends Component {
     handleSubmit(event) {
         event.preventDefault();
         this.todisRef.push({ name: this.state.name, emojis: this.props.emojis });
+        this.setState({
+            name: ''
+        });
     }
 
     render() {
         const { name } = this.state;
 
         return (
-            <form className="NewTodi">
+            <form className="NewTodi" onSubmit={this.handleSubmit}>
                 <input
                     type="text"
                     value={name}
@@ -34,8 +37,7 @@ class NewTodi extends Component {
                     }
                 />
 
-                {/* <input type="hidden" value={this.state.emojis} /> */}
-                <button onClick={this.handleSubmit} disabled={!name}>
+                <button onClick={this.props.onHide} disabled={!name}>
                     Submit
                 </button>
             </form>

@@ -41,7 +41,6 @@ class App extends Component {
                     {!currentUser && <SignIn />}
                     {currentUser && (
                         <div>
-                            {/* <NewTodi /> */}
                             <Emojis />
                             <Todis todis={todis} user={currentUser} />
                             <CurrentUser user={currentUser} />
