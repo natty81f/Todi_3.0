@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { database } from './firebase';
+import Alert from 'react-s-alert';
 
 class NewTodi extends Component {
     constructor(props) {
@@ -19,6 +20,15 @@ class NewTodi extends Component {
         this.setState({
             name: ''
         });
+
+        setTimeout(() => {
+            Alert.info('Your Todi has been saved!', {
+                position: 'top',
+                effect: 'stackslide',
+                timeout: 5000
+                // offset: 100
+            });
+        }, 1000);
     }
 
     render() {

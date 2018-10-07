@@ -7,6 +7,10 @@ import Todis from './Todis';
 import Emojis from './Emojis';
 import './App.css';
 
+import Alert from 'react-s-alert';
+import 'react-s-alert/dist/s-alert-default.css';
+import 'react-s-alert/dist/s-alert-css-effects/stackslide.css';
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -41,6 +45,7 @@ class App extends Component {
                     {!currentUser && <SignIn />}
                     {currentUser && (
                         <div>
+                            <Alert stack={{ limit: 3 }} />
                             <Emojis />
                             <Todis todis={todis} user={currentUser} />
                             <CurrentUser user={currentUser} />
