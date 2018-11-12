@@ -2,15 +2,27 @@
     "emojis": [
         {
             "title": "happy",
-            "image": "happy.png"
+            "image": "happy.svg"
         },
         {
             "title": "love",
-            "image": "love.png"
+            "image": "love.svg"
         },
         {
             "title": "omg",
-            "image": "omg.png"
+            "image": "omg.svg"
+        },
+        {
+            "title": "tired",
+            "image": "tired.svg"
+        },
+        {
+            "title": "confuzzled",
+            "image": "confuzzled.svg"
+        },
+        {
+            "title": "grumpy",
+            "image": "grumpy.svg"
         }
     ]
 }

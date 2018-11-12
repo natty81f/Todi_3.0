@@ -5,15 +5,22 @@ import { auth } from './firebase';
 const CurrentUser = ({ user }) => {
     return (
         <div className="CurrentUser">
-            <img
+            {/* <img
                 src={user.photoURL}
                 className="CurrentUser--photo"
                 alt={user.displayName}
-            />
+            /> */}
             <div className="CurrentUser--identification">
-                <h3>{user.displayName}</h3>
-                <p>{user.email}</p>
-                <button onClick={() => auth.signOut()}>Sign Out</button>
+                <img
+                    src={user.photoURL}
+                    className="CurrentUser--photo"
+                    alt={user.displayName}
+                />
+                <p>{user.displayName}</p>
+                {/* <p>{user.email}</p> */}
+                <button className="btn pink" onClick={() => auth.signOut()}>
+                    LOG OUT
+                </button>
             </div>
         </div>
     );

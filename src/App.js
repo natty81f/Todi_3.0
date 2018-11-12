@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
 import { auth, database } from './firebase';
 import CurrentUser from './CurrentUser';
 import SignIn from './SignIn';
 import Todis from './Todis';
 import Emojis from './Emojis';
+import logo from './TODI_logo_pink.svg';
 import './App.css';
 
 import Alert from 'react-s-alert';
@@ -37,21 +37,31 @@ class App extends Component {
 
         return (
             <div className="App">
-                <header className="App-header">
-                    <h2>Welcome to soon to be Todi</h2>
-                </header>
-
-                <div>
-                    {!currentUser && <SignIn />}
-                    {currentUser && (
-                        <div>
-                            <Alert stack={{ limit: 3 }} />
-                            <Emojis />
-                            <Todis todis={todis} user={currentUser} />
-                            <CurrentUser user={currentUser} />
+                {!currentUser && <SignIn />}
+                {currentUser && (
+                    <div className="l-inner-fullwidth">
+                        <div className="row">
+                            <header className="header white">
+                                <div className="l-container">
+                                    <div className="logo">
+                                        <img src={logo} alt="logo" />
+                                    </div>
+                                    <div className="right">
+                                        {' '}
+                                        <CurrentUser user={currentUser} />
+                                    </div>
+                                </div>
+                            </header>
+                            <div className="SubContent gray clearfix">
+                                <Alert stack={{ limit: 3 }} />
+                                <div className="l-container">
+                                    <Emojis />
+                                    <Todis todis={todis} user={currentUser} />
+                                </div>
+                            </div>
                         </div>
-                    )}
-                </div>
+                    </div>
+                )}
             </div>
         );
     }

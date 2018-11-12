@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="172px" height="139px" viewBox="0 0 172 139" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>love</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="todis" transform="translate(-232.000000, -48.000000)" fill-rule="nonzero">
+            <g id="love" transform="translate(232.000000, 48.000000)">
+                <polygon id="Triangle" fill="#FF0A00" points="86 0 172 139 0 139"></polygon>
+                <path d="M62,111 C69.3356273,121.00492 77.2025902,126.004918 85.6008888,125.999996 C100.568703,125.991224 110.190049,111 110.190049,111" id="Path-4" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"></path>
+                <path d="M71.375,71 C69.5975,71 68.03,71.84125 67,73.12875 C65.97,71.84125 64.4025,71 62.625,71 C59.51875,71 57,73.51875 57,76.625 C57,83.5 67,91 67,91 C67,91 77,83.5 77,76.625 C77,73.51875 74.48125,71 71.375,71 Z" id="Shape" fill="#FFFFFF"></path>
+                <path d="M109.375,71 C107.5975,71 106.03,71.84125 105,73.12875 C103.97,71.84125 102.4025,71 100.625,71 C97.51875,71 95,73.51875 95,76.625 C95,83.5 105,91 105,91 C105,91 115,83.5 115,76.625 C115,73.51875 112.48125,71 109.375,71 Z" id="Shape" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="172px" height="139px" viewBox="0 0 172 139" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>tired</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="todis" transform="translate(-43.000000, -208.000000)" fill-rule="nonzero">
+            <g id="tired" transform="translate(43.000000, 208.000000)">
+                <polygon id="Triangle" fill="#15E2AF" points="86 0 172 139 0 139"></polygon>
+                <path d="M52,73 C55.8518519,79 60.1851852,82 65,82 C73.2316075,82 78,73 78,73" id="Path-5" stroke="#000000" stroke-width="4" stroke-linecap="round"></path>
+                <path d="M94,73 C97.8518519,79 102.185185,82 107,82 C115.231608,82 120,73 120,73" id="Path-5" stroke="#000000" stroke-width="4" stroke-linecap="round"></path>
+                <ellipse id="Oval-2" fill="#000000" cx="86" cy="119.5" rx="14" ry="6.5"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

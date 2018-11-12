@@ -35,7 +35,7 @@ class Todis extends Component {
     render() {
         const { user, todis } = this.props;
         return (
-            <section className="Todis">
+            <section className="Todis col-md-4">
                 {map(todis, (todi, key) => (
                     <Todi
                         key={key}

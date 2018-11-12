@@ -1,28 +1,149 @@
 .App {
-  text-align: center;
+    background: #f2f2f2;
+    color: #646f79;
+    font-family: 'Lato', sans-serif;
+    transition: transform 200ms ease-out;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.l-container {
+    width: 1180px;
+    margin: 0 auto;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.l-inner-fullwidth {
+    margin-left: -30px;
+    margin-right: -30px;
+}
+.header {
+    background: rgba(0, 0, 0, 0.2);
+    height: 64px;
+    padding: 1.2em 0;
+    color: white;
+    transition: height 0.2s ease-in-out;
+}
+.header .right {
+    float: right;
+}
+.header.white {
+    background: white;
+    color: #9599a0;
+    border-bottom: 1px solid #e4e2e2;
+}
+.logo img {
+    height: 24px;
+    float: left;
+    margin-top: 2px;
 }
 
-.App-title {
-  font-size: 1.5em;
+.banner {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTAyMXB4IiBoZWlnaHQ9IjQ1N3B4IiB2aWV3Qm94PSIwIDAgMTAyMSA0NTciIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUxLjMgKDU3NTQ0KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5SZWN0YW5nbGU8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz4KICAgICAgICA8bGluZWFyR3JhZGllbnQgeDE9IjAlIiB5MT0iMCUiIHgyPSI5Ni41MzE3OTE5JSIgeTI9Ijk0LjkzMzE3NjglIiBpZD0ibGluZWFyR3JhZGllbnQtMSI+CiAgICAgICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiMzMjAyOTYiIG9mZnNldD0iMCUiPjwvc3RvcD4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iI0ZCMTQ3MCIgb2Zmc2V0PSIxMDAlIj48L3N0b3A+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJEZXNrdG9wIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMy4wMDAwMDAsIC0xLjAwMDAwMCkiIGZpbGw9InVybCgjbGluZWFyR3JhZGllbnQtMSkiIGZpbGwtcnVsZT0ibm9uemVybyI+CiAgICAgICAgICAgIDxnIGlkPSJWZXJzaW9uLTEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMuMDAwMDAwLCAwLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZSIgeD0iMCIgeT0iMSIgd2lkdGg9IjEwMjQiIGhlaWdodD0iNDU3Ij48L3JlY3Q+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==);
+
+    background-size: cover;
+    /* background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI0MCIgaGVpZ2h0PSI0ODAiIHZpZXdCb3g9IjAgMCAxMjQwIDQ4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48bGluZWFyR3JhZGllbnQgeDE9IjAlIiB5MT0iNTAlIiB5Mj0iNTAlIiBpZD0iYSI+PHN0b3Agc3RvcC1jb2xvcj0iIzdEMDFBMSIgb2Zmc2V0PSIwJSIvPjxzdG9wIHN0b3AtY29sb3I9IiNGNTAiIG9mZnNldD0iMTAwJSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxwYXRoIGQ9Ik0wIDBoMTI0MHYyMzVMMCA0ODB6IiBmaWxsPSJ1cmwoI2EpIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=)
+        no-repeat; */
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: white;
+}
+.banner_todi img {
+    width: 305px;
+}
+.hero {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+    color: white;
+    padding: 3.25em 0 6.5em;
 }
 
-.App-intro {
-  font-size: large;
+.hero .title {
+    font-size: 2.9em;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.hero .subtitle {
+    font-size: 1.6em;
+    padding-top: 0.6em;
+}
+
+.btn {
+    letter-spacing: 1px;
+    padding: 7px 20px;
+    border-radius: 3px;
+}
+
+.btn.focus,
+.btn:focus,
+.btn:hover {
+    color: white;
+}
+
+.orange {
+    background: #f03d40;
+    color: white;
+    font-weight: 300;
+    margin-top: 1.5em;
+    font-size: 1.3em;
+    padding: 10px 20px;
+}
+
+.pink {
+    background: transparent;
+    font-size: 0.9em;
+    color: #fb1470;
+    border-color: #fb1470;
+}
+.pink:hover {
+    color: #fb1470;
+}
+.transparent_white {
+    font-size: 0.9em;
+    background-color: transparent;
+    background-image: none;
+    border-color: white;
+}
+
+.SubContent.gray {
+    background: #f9f9fb;
+}
+
+.SubContent {
+    background: white;
+    padding: 3.5em 3.5em 5em;
+}
+
+.SubContent .features h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.SubContent .features .detail {
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNzlweCIgaGVpZ2h0PSI0cHgiIHZpZXdCb3g9IjAgMCA3OSA0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPCEtLSBHZW5lcmF0b3I6IFNrZXRjaCA1MS4zICg1NzU0NCkgLSBodHRwOi8vd3d3LmJvaGVtaWFuY29kaW5nLmNvbS9za2V0Y2ggLS0+CiAgICA8dGl0bGU+UmVjdGFuZ2xlIDY8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz4KICAgICAgICA8bGluZWFyR3JhZGllbnQgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjAlIiBpZD0ibGluZWFyR3JhZGllbnQtMSI+CiAgICAgICAgICAgIDxzdG9wIHN0b3AtY29sb3I9IiNFRTI1QUUiIG9mZnNldD0iMCUiPjwvc3RvcD4KICAgICAgICAgICAgPHN0b3Agc3RvcC1jb2xvcj0iIzU2MDY5MCIgb2Zmc2V0PSIxMDAlIj48L3N0b3A+CiAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJEZXNrdG9wIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjAuMDAwMDAwLCAtNjExLjAwMDAwMCkiIGZpbGw9InVybCgjbGluZWFyR3JhZGllbnQtMSkiIGZpbGwtcnVsZT0ibm9uemVybyI+CiAgICAgICAgICAgIDxnIGlkPSJwb2ludC0xIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MC4wMDAwMDAsIDUzNy4wMDAwMDApIj4KICAgICAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUtNiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzkuNTAwMDAwLCA3Ni4wMDAwMDApIHNjYWxlKDEsIC0xKSB0cmFuc2xhdGUoLTM5LjUwMDAwMCwgLTc2LjAwMDAwMCkgIiB4PSIwIiB5PSI3NCIgd2lkdGg9Ijc5IiBoZWlnaHQ9IjQiPjwvcmVjdD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+);
+    height: 3px;
+    width: 79px;
+}
+
+.CurrentUser img {
+    width: 36px;
+    border-radius: 15px;
+}
+
+.CurrentUser--identification > * {
+    float: left;
+}
+
+.emojis .main {
+    padding: 2em 3em 0;
+}
+
+.emojis .show-emoji {
+    text-align: center;
+    padding-bottom: 4em;
+}
+
+.emojis .show-emoji img {
+    width: 140px;
+    padding-bottom: 0.75em;
+}
+
+.emojis .show-emoji .title {
+    font-size: 1.2em;
 }

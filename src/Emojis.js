@@ -32,25 +32,30 @@ class Emojis extends Component {
     render() {
         return (
             <div className="emojis">
-                {preload.emojis.map((emoji, key) => (
-                    <div
-                        className="show-emoji"
-                        key={key}
-                        onClick={this.handleOpen.bind(this, emoji.title)}
-                    >
-                        <img alt={`${emoji.title} Emoji`} src={`/${emoji.image}`} />
-                        <h3>{emoji.title}</h3>
-                    </div>
-                ))}
+                <div className="main col-md-8">
+                    {preload.emojis.map((emoji, key) => (
+                        <div
+                            className="show-emoji col-md-4"
+                            key={key}
+                            onClick={this.handleOpen.bind(this, emoji.title)}
+                        >
+                            <img alt={`${emoji.title} Emoji`} src={`/${emoji.image}`} />
+                            <div className="title">{emoji.title}</div>
+                        </div>
+                    ))}
 
-                <Modal show={this.state.show} onHide={this.handleClose}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>Write your new Todi</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <NewTodi emojis={this.state.emojis} onHide={this.handleClose} />
-                    </Modal.Body>
-                </Modal>
+                    <Modal show={this.state.show} onHide={this.handleClose}>
+                        <Modal.Header closeButton>
+                            <Modal.Title>Write your new Todi</Modal.Title>
+                        </Modal.Header>
+                        <Modal.Body>
+                            <NewTodi
+                                emojis={this.state.emojis}
+                                onHide={this.handleClose}
+                            />
+                        </Modal.Body>
+                    </Modal>
+                </div>
             </div>
         );
     }
