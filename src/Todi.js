@@ -8,12 +8,20 @@ class Todi extends Component {
         const userHasLiked = likes && Object.keys(likes).includes(user.uid);
         return (
             <article className="Todi">
-                <h3>{name}</h3>
+                <div className="user--meta">
+                    <img
+                        src={user.photoURL}
+                        className="user--photo"
+                        alt={user.displayName}
+                    />
+                    <span className="user--name">{user.displayName}</span>
+                </div>
+                <p>{name}</p>
                 <ul>{likes && map(likes, (like, key) => <li key={key}>{like}</li>)}</ul>
                 {userHasLiked ? (
-                    <button onClick={handleDeselect}>Nevermind</button>
+                    <button className="solid" onClick={handleDeselect} />
                 ) : (
-                    <button onClick={handleSelect}>I like dis</button>
+                    <button onClick={handleSelect} />
                 )}
             </article>
         );

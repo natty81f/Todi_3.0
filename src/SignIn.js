@@ -6,29 +6,31 @@ import todi_banner from './happy.svg';
 class SignIn extends Component {
     render() {
         return (
-            <div className="l-inner-fullwidth">
+            <div>
                 <div className="banner">
                     <header className="header">
-                        <div className="l-container">
-                            <div className="logo">
-                                <img src={logo} alt="logo" />
-                            </div>
-                            <div className="right">
-                                <div className="SignIn">
-                                    <button
-                                        className="btn transparent_white"
-                                        onClick={() =>
-                                            auth.signInWithPopup(googleAuthProvider)
-                                        }
-                                    >
-                                        LOG IN
-                                    </button>
+                        <div className="container">
+                            <div className="row">
+                                <div className="logo">
+                                    <img src={logo} alt="logo" />
+                                </div>
+                                <div className="right">
+                                    <div className="SignIn">
+                                        <button
+                                            className="btn white_outline"
+                                            onClick={() =>
+                                                auth.signInWithPopup(googleAuthProvider)
+                                            }
+                                        >
+                                            LOG IN
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </header>
                     <section className="hero clearfix">
-                        <div className="l-container">
+                        <div className="container">
                             <div className="row">
                                 <div className="col-md-7">
                                     <div className="title">
@@ -46,7 +48,7 @@ class SignIn extends Component {
                                             auth.signInWithPopup(googleAuthProvider)
                                         }
                                     >
-                                        Write a todi
+                                        WRITE A TODI
                                     </button>
                                 </div>
                                 <div className="col-md-5">

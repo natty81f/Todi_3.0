@@ -37,6 +37,7 @@ class NewTodi extends Component {
         return (
             <form className="NewTodi" onSubmit={this.handleSubmit}>
                 <input
+                    className="form_input new_todi_input"
                     type="text"
                     value={name}
                     placeholder="Spill your heart out..."
@@ -47,8 +48,12 @@ class NewTodi extends Component {
                     }
                 />
 
-                <button onClick={this.props.onHide} disabled={!name}>
-                    Submit
+                <button
+                    className="form_button"
+                    onClick={this.props.onHide}
+                    disabled={!name}
+                >
+                    SUBMIT
                 </button>
             </form>
         );

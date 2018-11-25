@@ -33,14 +33,20 @@ class Emojis extends Component {
         return (
             <div className="emojis">
                 <div className="main col-md-8">
+                    <h2>Today I Felt</h2>
                     {preload.emojis.map((emoji, key) => (
-                        <div
-                            className="show-emoji col-md-4"
-                            key={key}
-                            onClick={this.handleOpen.bind(this, emoji.title)}
-                        >
-                            <img alt={`${emoji.title} Emoji`} src={`/${emoji.image}`} />
-                            <div className="title">{emoji.title}</div>
+                        <div className="col-md-4">
+                            <div
+                                className="show-emoji"
+                                key={key}
+                                onClick={this.handleOpen.bind(this, emoji.title)}
+                            >
+                                <img
+                                    alt={`${emoji.title} Emoji`}
+                                    src={`/${emoji.image}`}
+                                />
+                                <div className="title">{emoji.title}</div>
+                            </div>
                         </div>
                     ))}
 

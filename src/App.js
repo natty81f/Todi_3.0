@@ -39,22 +39,23 @@ class App extends Component {
             <div className="App">
                 {!currentUser && <SignIn />}
                 {currentUser && (
-                    <div className="l-inner-fullwidth">
-                        <div className="row">
-                            <header className="header white">
-                                <div className="l-container">
+                    <div>
+                        <header className="header white">
+                            <div className="container">
+                                <div className="row">
                                     <div className="logo">
                                         <img src={logo} alt="logo" />
                                     </div>
                                     <div className="right">
-                                        {' '}
                                         <CurrentUser user={currentUser} />
                                     </div>
                                 </div>
-                            </header>
-                            <div className="SubContent gray clearfix">
+                            </div>
+                        </header>
+                        <div className="SubContent gray clearfix">
+                            <div className="container">
                                 <Alert stack={{ limit: 3 }} />
-                                <div className="l-container">
+                                <div className="row">
                                     <Emojis />
                                     <Todis todis={todis} user={currentUser} />
                                 </div>
