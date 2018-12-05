@@ -32,10 +32,10 @@ class Emojis extends Component {
     render() {
         return (
             <div className="emojis">
-                <div className="main col-md-8">
+                <div className="main col-md-8 col-xs-12">
                     <h2>Today I Felt</h2>
                     {preload.emojis.map((emoji, key) => (
-                        <div className="col-md-4">
+                        <div className="col-md-4 col-xs-6">
                             <div
                                 className="show-emoji"
                                 key={key}

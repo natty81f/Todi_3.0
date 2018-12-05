@@ -43,11 +43,13 @@ class App extends Component {
                         <header className="header white">
                             <div className="container">
                                 <div className="row">
-                                    <div className="logo">
-                                        <img src={logo} alt="logo" />
-                                    </div>
-                                    <div className="right">
-                                        <CurrentUser user={currentUser} />
+                                    <div className="col-md-12">
+                                        <div className="logo">
+                                            <img src={logo} alt="logo" />
+                                        </div>
+                                        <div className="right">
+                                            <CurrentUser user={currentUser} />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -63,6 +65,17 @@ class App extends Component {
                         </div>
                     </div>
                 )}
+                <footer class="hidden-xs">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-12">
+                                {' '}
+                                © 2019 Todi — Designed and developed by{' '}
+                                <a href="">Hello Active</a>.
+                            </div>
+                        </div>
+                    </div>
+                </footer>
             </div>
         );
     }

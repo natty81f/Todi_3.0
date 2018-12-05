@@ -11,19 +11,23 @@ class SignIn extends Component {
                     <header className="header">
                         <div className="container">
                             <div className="row">
-                                <div className="logo">
-                                    <img src={logo} alt="logo" />
-                                </div>
-                                <div className="right">
-                                    <div className="SignIn">
-                                        <button
-                                            className="btn white_outline"
-                                            onClick={() =>
-                                                auth.signInWithPopup(googleAuthProvider)
-                                            }
-                                        >
-                                            LOG IN
-                                        </button>
+                                <div className="col-md-12">
+                                    <div className="logo">
+                                        <img src={logo} alt="logo" />
+                                    </div>
+                                    <div className="right">
+                                        <div className="SignIn">
+                                            <button
+                                                className="btn white_outline"
+                                                onClick={() =>
+                                                    auth.signInWithPopup(
+                                                        googleAuthProvider
+                                                    )
+                                                }
+                                            >
+                                                LOG IN
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -32,14 +36,16 @@ class SignIn extends Component {
                     <section className="hero clearfix">
                         <div className="container">
                             <div className="row">
-                                <div className="col-md-7">
-                                    <div className="title">
-                                        A digital diary <br />
-                                        for busy people
-                                    </div>
-                                    <div className="subtitle">
-                                        Record you daily <br />
-                                        musings and thoughts.
+                                <div className="col-md-7 col-sm-6 col-xs-12">
+                                    <div className="text">
+                                        <div className="title">
+                                            A digital diary <br />
+                                            for busy people
+                                        </div>
+                                        <div className="subtitle">
+                                            Record you daily <br />
+                                            musings and thoughts.
+                                        </div>
                                     </div>
 
                                     <button
@@ -51,7 +57,7 @@ class SignIn extends Component {
                                         WRITE A TODI
                                     </button>
                                 </div>
-                                <div className="col-md-5">
+                                <div className="col-md-5 col-sm-6 col-xs-12">
                                     <div className="banner_todi">
                                         <img src={todi_banner} />
                                     </div>
@@ -60,17 +66,17 @@ class SignIn extends Component {
                         </div>
                     </section>
                 </div>
-                <section className="SubContent clearfix">
-                    <div className="l-container">
+                <section className="SubContent clearfix hidden-xs">
+                    <div className="container">
                         <div className="row">
-                            <div className="col-md-4 features">
+                            <div className="col-md-4 col-sm-6 features">
                                 <h2>
                                     Keep a records of <br />
                                     your moods
                                 </h2>
                                 <div className="detail" />
                             </div>
-                            <div className="col-md-4 features">
+                            <div className="col-md-4 col-sm-6 features">
                                 <h2>
                                     Check your stats <br />
                                     daily and yearly
