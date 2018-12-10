@@ -4,7 +4,6 @@ import CurrentUser from './CurrentUser';
 import SignIn from './SignIn';
 import Todis from './Todis';
 import Emojis from './Emojis';
-import logo from './TODI_logo_pink.svg';
 import './App.css';
 
 import Alert from 'react-s-alert';
@@ -44,9 +43,7 @@ class App extends Component {
                             <div className="container">
                                 <div className="row">
                                     <div className="col-md-12">
-                                        <div className="logo">
-                                            <img src={logo} alt="logo" />
-                                        </div>
+                                        <div className="logo pink" />
                                         <div className="right">
                                             <CurrentUser user={currentUser} />
                                         </div>

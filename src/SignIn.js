@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { auth, googleAuthProvider } from './firebase';
-import logo from './TODI_logo_white.svg';
 import todi_banner from './happy.svg';
 
 class SignIn extends Component {
@@ -12,9 +11,7 @@ class SignIn extends Component {
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-12">
-                                    <div className="logo">
-                                        <img src={logo} alt="logo" />
-                                    </div>
+                                    <div className="logo" />
                                     <div className="right">
                                         <div className="SignIn">
                                             <button
@@ -49,7 +46,7 @@ class SignIn extends Component {
                                     </div>
 
                                     <button
-                                        className="orange btn"
+                                        className="orange btn home-login"
                                         onClick={() =>
                                             auth.signInWithPopup(googleAuthProvider)
                                         }
