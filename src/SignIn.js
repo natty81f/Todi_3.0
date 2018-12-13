@@ -15,7 +15,7 @@ class SignIn extends Component {
                                     <div className="right">
                                         <div className="SignIn">
                                             <button
-                                                className="btn white_outline"
+                                                className="btn white_outline sm"
                                                 onClick={() =>
                                                     auth.signInWithPopup(
                                                         googleAuthProvider
@@ -56,7 +56,7 @@ class SignIn extends Component {
                                 </div>
                                 <div className="col-md-5 col-sm-6 col-xs-12">
                                     <div className="banner_todi">
-                                        <img src={todi_banner} />
+                                        <img src={todi_banner} alt="Todi background" />
                                     </div>
                                 </div>
                             </div>

@@ -6,6 +6,7 @@ import Todis from './Todis';
 import Emojis from './Emojis';
 import './App.css';
 
+import { Tabs, Tab } from 'react-bootstrap';
 import Alert from 'react-s-alert';
 import 'react-s-alert/dist/s-alert-default.css';
 import 'react-s-alert/dist/s-alert-css-effects/stackslide.css';
@@ -47,6 +48,17 @@ class App extends Component {
                                         <div className="right">
                                             <CurrentUser user={currentUser} />
                                         </div>
+                                        <Tabs defaultActiveKey={2} className="tabs">
+                                            <Tab eventKey={1} title="Write a Todi">
+                                                <Emojis />
+                                            </Tab>
+                                            <Tab eventKey={2} title="Todis">
+                                                <Todis todis={todis} user={currentUser} />
+                                            </Tab>
+                                            <Tab eventKey={3} title="Profile">
+                                                User Profile goes here
+                                            </Tab>
+                                        </Tabs>
                                     </div>
                                 </div>
                             </div>
@@ -54,15 +66,11 @@ class App extends Component {
                         <div className="SubContent gray clearfix">
                             <div className="container">
                                 <Alert stack={{ limit: 3 }} />
-                                <div className="row">
-                                    <Emojis />
-                                    <Todis todis={todis} user={currentUser} />
-                                </div>
                             </div>
                         </div>
                     </div>
                 )}
-                <footer class="hidden-xs">
+                <footer className="hidden-xs">
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12">

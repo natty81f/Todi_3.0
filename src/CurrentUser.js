@@ -12,7 +12,7 @@ const CurrentUser = ({ user }) => {
                     </li>
                     <li>
                         <button
-                            className="btn pink_outline"
+                            className="btn pink_outline sm"
                             onClick={() => auth.signOut()}
                         >
                             LOG OUT
