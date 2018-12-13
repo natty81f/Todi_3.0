@@ -48,11 +48,23 @@ class App extends Component {
                                         <div className="right">
                                             <CurrentUser user={currentUser} />
                                         </div>
-                                        <Tabs defaultActiveKey={2} className="tabs">
-                                            <Tab eventKey={1} title="Write a Todi">
+                                        <Tabs
+                                            defaultActiveKey={2}
+                                            className="tabs"
+                                            id="navigation-tabs"
+                                        >
+                                            <Tab
+                                                eventKey={1}
+                                                tabClassName="write-icon"
+                                                title="Write a Todi"
+                                            >
                                                 <Emojis />
                                             </Tab>
-                                            <Tab eventKey={2} title="Todis">
+                                            <Tab
+                                                eventKey={2}
+                                                tabClassName="read-icon"
+                                                title="Todis"
+                                            >
                                                 <Todis todis={todis} user={currentUser} />
                                             </Tab>
                                             <Tab eventKey={3} title="Profile">
