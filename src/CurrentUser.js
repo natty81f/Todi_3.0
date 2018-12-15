@@ -8,7 +8,7 @@ const CurrentUser = ({ user }) => {
             <div className="user--identification">
                 <ul>
                     <li>
-                        <span>{user.displayName}</span>
+                        <img src={user.photoURL} alt={user.displayName} width="25px" />
                     </li>
                     <li>
                         <button
@@ -19,7 +19,7 @@ const CurrentUser = ({ user }) => {
                         </button>
                     </li>
                 </ul>
-
+                {/* <span>{user.displayName}</span> */}
                 {/* <p>{user.email}</p> */}
             </div>
         </div>

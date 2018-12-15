@@ -67,7 +67,11 @@ class App extends Component {
                                             >
                                                 <Todis todis={todis} user={currentUser} />
                                             </Tab>
-                                            <Tab eventKey={3} title="Profile">
+                                            <Tab
+                                                eventKey={3}
+                                                tabClassName="profile-icon"
+                                                title="Profile"
+                                            >
                                                 User Profile goes here
                                             </Tab>
                                         </Tabs>
@@ -75,7 +79,7 @@ class App extends Component {
                                 </div>
                             </div>
                         </header>
-                        <div className="SubContent gray clearfix">
+                        <div className="gray clearfix">
                             <div className="container">
                                 <Alert stack={{ limit: 3 }} />
                             </div>
