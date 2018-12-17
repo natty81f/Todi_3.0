@@ -196,7 +196,7 @@ ul {
 }
 
 .emojis .main {
-    padding: 2.5em 3em 0;
+    padding: 2.5em 1em 0;
 }
 
 .emojis h2 {
@@ -214,7 +214,7 @@ ul {
 }
 
 .emojis .show-emoji img {
-    width: 140px;
+    width: 94px;
     padding-bottom: 0.75em;
 }
 
@@ -223,10 +223,11 @@ ul {
 }
 
 .Todis {
-    height: 530px;
-    overflow: auto;
+    /* height: 530px;
+    overflow: auto; */
     position: relative;
     padding-top: 3em;
+    padding-bottom: 11em;
 }
 
 .Todi {
@@ -324,6 +325,10 @@ footer {
     background-color: #1f2532;
     color: #757b8c;
     padding: 3em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
 }
 
 footer a {
@@ -350,6 +355,10 @@ footer a:hover {
         width: 100px;
         float: left;
         margin-top: 2px;
+    }
+    .header .logo,
+    .header .logo.pink {
+        margin-right: 0;
     }
     .header .right {
         display: block;
@@ -395,6 +404,19 @@ footer a:hover {
 
     .btn.home-login {
         position: relative;
+    }
+    .emojis .main {
+        padding: 2.5em 3em;
+    }
+    .emojis .show-emoji img {
+        width: 140px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .header .logo,
+    .header .logo.pink {
+        margin-right: 6%;
     }
 }
 
@@ -478,6 +500,7 @@ footer a:hover {
 }
 @media screen and (min-width: 768px) {
     .nav-tabs > li > a {
+        font-size: 0.9em;
         text-indent: 0;
         overflow: auto;
         width: auto;
@@ -498,5 +521,10 @@ footer a:hover {
 
     .nav-tabs li.profile-icon a {
         padding-left: 38px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .nav-tabs > li > a {
+        font-size: 1.05em;
     }
 }
