@@ -4,6 +4,7 @@ import CurrentUser from './CurrentUser';
 import SignIn from './SignIn';
 import Todis from './Todis';
 import Emojis from './Emojis';
+import pick from 'lodash/pick';
 import './App.css';
 
 import { Tabs, Tab } from 'react-bootstrap';
@@ -15,30 +16,51 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            currentUser: null,
-            todis: null
+            author: null,
+            todis: null,
+            user: null,
+            users: null
         };
 
         this.todiRef = database.ref('/todis');
+        this.userRef = database.ref('/users');
     }
 
     componentDidMount() {
-        auth.onAuthStateChanged(currentUser => {
-            this.setState({ currentUser });
+        auth.onAuthStateChanged(author => {
+            this.setState({ author });
 
             this.todiRef.on('value', snapshot => {
                 this.setState({ todis: snapshot.val() });
             });
         });
+
+        auth.onAuthStateChanged(users => {
+            this.setState({ users });
+
+            this.userRef.on('value', snapshot => {
+                this.setState({ users: snapshot.val() });
+            });
+        });
+
+        auth.onAuthStateChanged(user => {
+            if (user) {
+                this.userId = user.uid;
+                database
+                    .ref('users')
+                    .child(user.uid)
+                    .set(pick(user, ['displayName', 'email', 'uid', 'photoURL']));
+            }
+        });
     }
 
     render() {
-        const { currentUser, todis } = this.state;
+        const { todis, users, author } = this.state;
 
         return (
             <div className="App">
-                {!currentUser && <SignIn />}
-                {currentUser && (
+                {!author && <SignIn />}
+                {author && (
                     <div>
                         <header className="header white">
                             <div className="container">
@@ -46,7 +68,7 @@ class App extends Component {
                                     <div className="col-md-12">
                                         <div className="logo pink" />
                                         <div className="right">
-                                            <CurrentUser user={currentUser} />
+                                            <CurrentUser author={author} />
                                         </div>
                                         <Tabs
                                             defaultActiveKey={2}
@@ -58,14 +80,21 @@ class App extends Component {
                                                 tabClassName="write-icon"
                                                 title="Write a Todi"
                                             >
-                                                <Emojis />
+                                                <Emojis author={author} />
+                                                test 3
                                             </Tab>
                                             <Tab
                                                 eventKey={2}
                                                 tabClassName="read-icon"
                                                 title="Todis"
                                             >
-                                                <Todis todis={todis} user={currentUser} />
+                                                <Todis
+                                                    todis={todis}
+                                                    user={author}
+                                                    author={author}
+                                                    users={users}
+                                                />
+                                                test 2
                                             </Tab>
                                             <Tab
                                                 eventKey={3}

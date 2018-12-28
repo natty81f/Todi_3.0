@@ -19,9 +19,11 @@ class Emojis extends Component {
     // pass emoji title props
     handleOpen(title) {
         console.log(title);
+        console.log(this.props.author.uid);
         this.setState({
             emojis: title,
-            show: true
+            show: true,
+            uid: this.props.author.uid
         });
     }
 
@@ -57,6 +59,7 @@ class Emojis extends Component {
                         <Modal.Body>
                             <NewTodi
                                 emojis={this.state.emojis}
+                                uid={this.props.author.uid}
                                 onHide={this.handleClose}
                             />
                         </Modal.Body>

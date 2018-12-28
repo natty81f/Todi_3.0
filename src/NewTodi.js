@@ -8,7 +8,8 @@ class NewTodi extends Component {
         super(props);
         this.state = {
             name: '',
-            emojis: props.emojis
+            emojis: props.emojis,
+            uid: props.uid
         };
         this.todisRef = database.ref('/todis');
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,7 +17,11 @@ class NewTodi extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        this.todisRef.push({ name: this.state.name, emojis: this.props.emojis });
+        this.todisRef.push({
+            name: this.state.name,
+            emojis: this.props.emojis,
+            uid: this.props.uid
+        });
         this.setState({
             name: ''
         });
@@ -51,7 +56,8 @@ class NewTodi extends Component {
                 <button
                     className="form_button"
                     onClick={this.props.onHide}
-                    disabled={!name}
+                    //disabled={!name}
+                    disabled={!name.length}
                 >
                     SUBMIT
                 </button>

@@ -33,16 +33,19 @@ class Todis extends Component {
     }
 
     render() {
-        const { user, todis } = this.props;
+        const { users, todis, author, user } = this.props;
         return (
             <section className="Todis col-md-12 col-xs-12">
                 {map(todis, (todi, key) => (
                     <Todi
                         key={key}
+                        id={key}
                         {...todi}
+                        user={users[todi.uid]}
                         user={user}
                         handleSelect={() => this.handleSelect(key)}
                         handleDeselect={() => this.handleDeselect(key)}
+                        belongsToCurrentUser={author.uid && todi.uid === author.uid}
                     />
                 ))}
             </section>

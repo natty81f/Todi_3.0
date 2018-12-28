@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import map from 'lodash/map';
 
 class Todi extends Component {
     render() {
-        const { name, user, likes, handleSelect, handleDeselect } = this.props;
+        const {
+            name,
+            user,
+            likes,
+            handleSelect,
+            handleDeselect,
+            belongsToCurrentUser
+        } = this.props;
         const userHasLiked = likes && Object.keys(likes).includes(user.uid);
         return (
-            <article className="Todi">
+            <article
+                className={classNames('Todi', { 'current-user': belongsToCurrentUser })}
+            >
                 <div className="user--meta">
                     <img
                         src={user.photoURL}

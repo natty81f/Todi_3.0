@@ -288,7 +288,7 @@ ul {
 .form_button {
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.1071em;
-    border: 0;
+    border: 1px solid #f36;
     display: inline-block;
     margin: 20px auto;
     background: #f36;
@@ -310,6 +310,9 @@ ul {
     cursor: pointer;
     -webkit-box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25);
     box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.25);
+}
+button[disabled] {
+    background: #f48ba5;
 }
 .modal-header {
     font-family: 'Lato', sans-serif;
