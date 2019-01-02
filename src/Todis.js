@@ -13,27 +13,28 @@ class Todis extends Component {
     }
 
     handleSelect(key) {
-        const currentUser = this.props.user;
+        const user = this.props.user;
         database
             .ref('/todis')
             .child(key)
             .child('likes')
-            .child(currentUser.uid)
-            .set(currentUser.displayName);
+            .child(user.uid)
+            .set(user.displayName);
     }
 
     handleDeselect(key) {
-        const currentUser = this.props.user;
+        const user = this.props.user;
         database
             .ref('/todis')
             .child(key)
             .child('likes')
-            .child(currentUser.uid)
+            .child(user.uid)
             .remove();
     }
 
     render() {
-        const { users, todis, author, user } = this.props;
+        const { users, todis, user } = this.props;
+
         return (
             <section className="Todis col-md-12 col-xs-12">
                 {map(todis, (todi, key) => (
@@ -42,10 +43,9 @@ class Todis extends Component {
                         id={key}
                         {...todi}
                         user={users[todi.uid]}
-                        user={user}
                         handleSelect={() => this.handleSelect(key)}
                         handleDeselect={() => this.handleDeselect(key)}
-                        belongsToCurrentUser={author.uid && todi.uid === author.uid}
+                        belongsToCurrentUser={user.uid && todi.uid === user.uid}
                     />
                 ))}
             </section>
@@ -55,6 +55,7 @@ class Todis extends Component {
 
 Todis.propTypes = {
     user: PropTypes.object,
+    users: PropTypes.object,
     todisRef: PropTypes.object,
     todis: PropTypes.object
 };

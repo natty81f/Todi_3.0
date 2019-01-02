@@ -2,17 +2,13 @@ import React from 'react';
 import PropTypes, { shape } from 'prop-types';
 import { auth } from './firebase';
 
-const CurrentUser = ({ author }) => {
+const CurrentUser = ({ user }) => {
     return (
         <div className="CurrentUser">
             <div className="user--identification">
                 <ul>
                     <li>
-                        <img
-                            src={author.photoURL}
-                            alt={author.displayName}
-                            width="25px"
-                        />
+                        <img src={user.photoURL} alt={user.displayName} width="25px" />
                     </li>
                     <li>
                         <button
@@ -23,17 +19,14 @@ const CurrentUser = ({ author }) => {
                         </button>
                     </li>
                 </ul>
-                {/* <span>{user.displayName}</span> */}
-                {/* <p>{user.email}</p> */}
             </div>
         </div>
     );
 };
 
 CurrentUser.propTypes = {
-    author: shape({
+    user: shape({
         displayName: PropTypes.string,
-        email: PropTypes.string.isRequired,
         photoURL: PropTypes.string,
         uid: PropTypes.string.isRequired
     })

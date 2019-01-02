@@ -5,6 +5,10 @@ import map from 'lodash/map';
 
 class Todi extends Component {
     render() {
+        if (this.props.user === undefined) {
+            return <div>Loading...</div>;
+        }
+
         const {
             name,
             user,
@@ -13,6 +17,7 @@ class Todi extends Component {
             handleDeselect,
             belongsToCurrentUser
         } = this.props;
+
         const userHasLiked = likes && Object.keys(likes).includes(user.uid);
         return (
             <article
@@ -27,23 +32,25 @@ class Todi extends Component {
                     <span className="user--name">{user.displayName}</span>
                 </div>
                 <p>{name}</p>
-                <ul>{likes && map(likes, (like, key) => <li key={key}>{like}</li>)}</ul>
+                {/* <ul>{likes && map(likes, (like, key) => <li key={key}>{like}</li>)}</ul>
                 {userHasLiked ? (
                     <button className="solid" onClick={handleDeselect} />
                 ) : (
                     <button onClick={handleSelect} />
-                )}
+                )} */}
             </article>
         );
     }
 }
 
 Todi.propTypes = {
+    belongsToCurrentUser: PropTypes.bool,
     name: PropTypes.string,
-    likes: PropTypes.object,
-    user: PropTypes.object,
-    handleSelect: PropTypes.func,
-    handleDeselect: PropTypes.func
+    id: PropTypes.string,
+    user: PropTypes.object
+    //likes: PropTypes.object,
+    //handleSelect: PropTypes.func,
+    //handleDeselect: PropTypes.func
 };
 
 export default Todi;

@@ -56,7 +56,6 @@ class NewTodi extends Component {
                 <button
                     className="form_button"
                     onClick={this.props.onHide}
-                    //disabled={!name}
                     disabled={!name.length}
                 >
                     SUBMIT
@@ -67,7 +66,9 @@ class NewTodi extends Component {
 }
 
 NewTodi.propTypes = {
-    todisRef: PropTypes.object
+    todisRef: PropTypes.object,
+    user: PropTypes.object,
+    handleSubmit: PropTypes.func
 };
 
 export default NewTodi;
