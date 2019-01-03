@@ -8,7 +8,7 @@ class Todi extends Component {
             return <div>Loading...</div>;
         }
 
-        const { name, user, belongsToCurrentUser } = this.props;
+        const { name, user, belongsToCurrentUser, emojis } = this.props;
 
         return (
             <article
@@ -23,6 +23,7 @@ class Todi extends Component {
                     <span className="user--name">{user.displayName}</span>
                 </div>
                 <p>{name}</p>
+                <img src={`/${emojis}.svg`} alt={emojis} />
             </article>
         );
     }
@@ -31,6 +32,7 @@ class Todi extends Component {
 Todi.propTypes = {
     belongsToCurrentUser: PropTypes.bool,
     name: PropTypes.string,
+    emojis: PropTypes.string,
     user: PropTypes.object
 };
 

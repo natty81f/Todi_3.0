@@ -16,10 +16,9 @@ class Emojis extends Component {
         this.handleClose = this.handleClose.bind(this);
     }
 
-    // pass emoji title props
-    handleOpen(title) {
-        console.log(title);
-        console.log(this.props.user.uid);
+    // pass emoji title prop
+    handleOpen(title, image) {
+        //console.log(image);
         this.setState({
             emojis: title,
             show: true,
@@ -36,7 +35,7 @@ class Emojis extends Component {
             <div className="emojis">
                 <div className="main col-md-12 col-xs-12">
                     <h2>Today I Felt</h2>
-                    {preload.emojis.map((emoji, key) => (
+                    {preload.emojis.map((emoji, key, props) => (
                         <div className="col-md-4 col-xs-6" key={key}>
                             <div
                                 className="show-emoji"

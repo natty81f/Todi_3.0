@@ -236,14 +236,15 @@ ul {
     padding: 1em 1.5em;
     margin-bottom: 1em;
 }
-
-.Todi img {
-    width: 26px;
-    border-radius: 15px;
-}
 .Todi .user--meta {
     padding-bottom: 15px;
 }
+
+.Todi .user--meta img {
+    width: 26px;
+    border-radius: 15px;
+}
+
 .Todi .user--name {
     font-family: 'Montserrat', sans-serif;
     display: inline-block;
