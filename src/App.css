@@ -179,7 +179,7 @@ ul {
 
 .SubContent {
     background: white;
-    padding: 6.5em 0;
+    padding: 3.5em 0 14em;
 }
 
 .SubContent .features h2 {
@@ -231,24 +231,46 @@ ul {
 }
 
 .Todi {
+    font-family: 'Lato', sans-serif;
+    text-transform: capitalize;
     background: white;
     border: 1px solid #e4e2e2;
-    padding: 1em 1.5em;
+    padding: 2em 2.5em;
+    max-width: 800px;
     margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
 }
 .Todi .user--meta {
-    padding-bottom: 15px;
+    padding-bottom: 25px;
 }
 
-.Todi .user--meta img {
-    width: 26px;
-    border-radius: 15px;
+.Todi .user--meta .user--photo {
+    width: 36px;
+    border-radius: 18px;
+    float: left;
 }
 
 .Todi .user--name {
-    font-family: 'Montserrat', sans-serif;
-    display: inline-block;
-    margin-left: 10px;
+    color: rgba(0, 0, 0, 0.84);
+}
+
+.Todi .user--createdAt {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.Todi .user--name,
+.Todi .user--createdAt {
+    line-height: 1.45;
+    padding-left: 10px;
+}
+
+.Todi .user--meta .emoji {
+    text-align: right;
+}
+
+.Todi .user--meta .emoji img {
+    width: 30px;
 }
 
 .Todi button {
@@ -421,6 +443,10 @@ footer a:hover {
     .header .logo,
     .header .logo.pink {
         margin-right: 6%;
+    }
+
+    .Todi {
+        padding: 2em 5.5em;
     }
 }
 

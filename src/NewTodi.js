@@ -10,6 +10,7 @@ class NewTodi extends Component {
             name: '',
             emojis: props.emojis,
             uid: props.uid
+            // timeStamp: props.todis
         };
         this.todisRef = database.ref('/todis');
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -20,7 +21,8 @@ class NewTodi extends Component {
         this.todisRef.push({
             name: this.state.name,
             emojis: this.props.emojis,
-            uid: this.props.uid
+            uid: this.props.uid,
+            timeStamp: Date.now()
         });
         this.setState({
             name: ''
