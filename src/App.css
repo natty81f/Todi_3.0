@@ -23,7 +23,7 @@ ul {
 }
 .header li {
     display: inline;
-    margin-left: 2em;
+    margin-left: 1.5em;
 }
 .header .right {
     display: none;
@@ -193,6 +193,36 @@ ul {
 }
 .CurrentUser .user--identification span {
     margin-top: 8px;
+}
+
+.CurrentUser .user--photo {
+    border-radius: 12px;
+}
+
+.ProfileCard {
+    background: white;
+    border: 1px solid #e4e2e2;
+    max-width: 800px;
+    margin: 3em auto 5em;
+    padding: 2em 2em 3.5em;
+}
+
+.ProfileCard .details {
+    padding-top: 1em;
+}
+
+.ProfileCard .user--photo {
+    border-radius: 36px;
+}
+
+.ProfileCard .displayName {
+    font-size: 1.5em;
+    color: rgba(0, 0, 0, 0.84);
+    text-transform: capitalize;
+}
+
+.ProfileCard .email {
+    text-transform: lowercase;
 }
 
 .emojis .main {

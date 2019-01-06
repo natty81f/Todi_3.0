@@ -68,15 +68,15 @@ class SignIn extends Component {
                         <div className="row">
                             <div className="col-md-4 col-sm-6 features">
                                 <h2>
-                                    Keep a records of <br />
-                                    your moods
+                                    Keep a record of <br />
+                                    your thoughts
                                 </h2>
                                 <div className="detail" />
                             </div>
                             <div className="col-md-4 col-sm-6 features">
                                 <h2>
-                                    Check your stats <br />
-                                    daily and yearly
+                                    Check your mood <br />
+                                    stats anytime
                                 </h2>
                                 <div className="detail" />
                             </div>

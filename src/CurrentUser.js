@@ -8,7 +8,12 @@ const CurrentUser = ({ user }) => {
             <div className="user--identification">
                 <ul>
                     <li>
-                        <img src={user.photoURL} alt={user.displayName} width="25px" />
+                        <img
+                            src={user.photoURL}
+                            class="user--photo"
+                            alt={user.displayName}
+                            width="25px"
+                        />
                     </li>
                     <li>
                         <button

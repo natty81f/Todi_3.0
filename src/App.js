@@ -4,6 +4,7 @@ import CurrentUser from './CurrentUser';
 import SignIn from './SignIn';
 import Todis from './Todis';
 import Emojis from './Emojis';
+import ProfileCard from './ProfileCard';
 import pick from 'lodash/pick';
 import './App.css';
 
@@ -70,7 +71,7 @@ class App extends Component {
                                             <CurrentUser user={user} />
                                         </div>
                                         <Tabs
-                                            defaultActiveKey={2}
+                                            defaultActiveKey={1}
                                             className="tabs"
                                             id="navigation-tabs"
                                         >
@@ -97,7 +98,7 @@ class App extends Component {
                                                 tabClassName="profile-icon"
                                                 title="Profile"
                                             >
-                                                User Profile goes here
+                                                <ProfileCard user={user} />
                                             </Tab>
                                         </Tabs>
                                     </div>
@@ -117,7 +118,7 @@ class App extends Component {
                             <div className="col-md-12">
                                 {' '}
                                 © 2019 Todi — Designed and developed by{' '}
-                                <a href="">Hello Active</a>.
+                                <a href="https://helloactive.co/">Hello Active</a>.
                             </div>
                         </div>
                     </div>
