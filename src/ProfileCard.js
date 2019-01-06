@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes, { shape } from 'prop-types';
 
 const ProfileCard = ({ user }) => {
     return (
@@ -21,3 +22,12 @@ const ProfileCard = ({ user }) => {
 };
 
 export default ProfileCard;
+
+ProfileCard.propTypes = {
+    user: shape({
+        displayName: PropTypes.string,
+        photoURL: PropTypes.string,
+        email: PropTypes.string,
+        uid: PropTypes.string.isRequired
+    })
+};

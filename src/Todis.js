@@ -5,7 +5,7 @@ import map from 'lodash/map';
 
 class Todis extends Component {
     render() {
-        const { users, todis, user } = this.props;
+        const { user, users, todis } = this.props;
 
         return (
             <section className="Todis col-md-12 col-xs-12">

@@ -8,12 +8,11 @@ class Todi extends Component {
             return <div>Loading...</div>;
         }
 
-        const { name, timeStamp, user, belongsToCurrentUser, emojis } = this.props;
+        const { name, timeStamp, user, emojis, belongsToCurrentUser } = this.props;
         const createdAt = new Intl.DateTimeFormat('en-GB', {
             year: 'numeric',
             month: 'short',
-            day: '2-digit',
-            minute: 'numeric'
+            day: '2-digit'
         }).format(timeStamp);
 
         return (
@@ -42,7 +41,7 @@ class Todi extends Component {
                     </div>
                 </div>
 
-                <p>{name}</p>
+                <div className="content">{name}</div>
             </article>
         );
     }

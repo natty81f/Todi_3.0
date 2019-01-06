@@ -10,7 +10,7 @@ const CurrentUser = ({ user }) => {
                     <li>
                         <img
                             src={user.photoURL}
-                            class="user--photo"
+                            className="user--photo"
                             alt={user.displayName}
                             width="25px"
                         />
