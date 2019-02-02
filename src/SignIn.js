@@ -40,8 +40,8 @@ class SignIn extends Component {
                                             for busy people
                                         </div>
                                         <div className="subtitle">
-                                            Record you daily <br />
-                                            musings and thoughts.
+                                            Record your daily <br />
+                                            thoughts and musings.
                                         </div>
                                     </div>
 
@@ -68,15 +68,17 @@ class SignIn extends Component {
                         <div className="row">
                             <div className="col-md-4 col-sm-6 features">
                                 <h2>
-                                    Keep a record of <br />
-                                    your thoughts
+                                    Keep a record
+                                    <br />
+                                    of your thoughts
                                 </h2>
                                 <div className="detail" />
                             </div>
                             <div className="col-md-4 col-sm-6 features">
                                 <h2>
-                                    Check your mood <br />
-                                    stats anytime
+                                    Keep it short or long,
+                                    <br />
+                                    there's no format
                                 </h2>
                                 <div className="detail" />
                             </div>
